@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200727 18:19:32.255" rpa="false">
+<suite id="s1" name="Login" source="C:\robotWalmart\mobile\tests\login.robot">
+<test id="s1-t1" name="Login dados válidos">
+<kw name="Open Session" library="base" type="setup">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/walmart.apk</arg>
+<arg>udid=emulator-5554</arg>
+<arg>adbExecTimeout=120000</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:19:32.487" endtime="20200727 18:20:17.405"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:19:32.487" endtime="20200727 18:20:17.405"></status>
+</kw>
+<kw name="Dado que acesso a página principal" library="kws">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEXTO_WELCOME}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:20:17.406" endtime="20200727 18:20:21.849"></status>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<doc>Click text identified by ``text``.</doc>
+<arguments>
+<arg>${TEXTO_NEXT}</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:20:21.849" endtime="20200727 18:20:23.256"></status>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<doc>Click text identified by ``text``.</doc>
+<arguments>
+<arg>${TEXTO_NEXT}</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:20:23.256" endtime="20200727 18:20:24.025"></status>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<doc>Click text identified by ``text``.</doc>
+<arguments>
+<arg>${TEXTO_STARTED}</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:20:24.025" endtime="20200727 18:20:24.805"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200727 18:20:27.806" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200727 18:20:24.805" endtime="20200727 18:20:27.806"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_ENABLE}</arg>
+</arguments>
+<msg timestamp="20200727 18:20:27.807" level="INFO">Clicking element 'id=com.walmart.android:id/enableLocation'.</msg>
+<status status="PASS" starttime="20200727 18:20:27.806" endtime="20200727 18:20:27.853"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEXTO_DENY}</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:20:27.853" endtime="20200727 18:20:30.864"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_DENY}</arg>
+</arguments>
+<msg timestamp="20200727 18:20:30.868" level="INFO">Clicking element 'id=com.android.packageinstaller:id/permission_deny_button'.</msg>
+<status status="PASS" starttime="20200727 18:20:30.864" endtime="20200727 18:20:31.347"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:20:17.406" endtime="20200727 18:20:31.347"></status>
+</kw>
+<kw name="Quando submeto o meu email &quot;amanda_amy12@hotmail.com&quot;" library="kws">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEXTO_SINGNIN}</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:20:31.349" endtime="20200727 18:20:33.048"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_SINGN}</arg>
+</arguments>
+<msg timestamp="20200727 18:20:33.051" level="INFO">Clicking element 'accessibility_id=Sign in'.</msg>
+<status status="PASS" starttime="20200727 18:20:33.048" endtime="20200727 18:20:33.129"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200727 18:20:35.130" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200727 18:20:33.129" endtime="20200727 18:20:35.130"></status>
+</kw>
+<kw name="Input Value" library="AppiumLibrary">
+<doc>Sets the given value into text field identified by `locator`. This is an IOS only keyword, input value makes use of set_value</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200727 18:20:35.133" level="INFO">Setting text 'amanda_amy12@hotmail.com' into text field 'id=com.walmart.android:id/email'</msg>
+<status status="PASS" starttime="20200727 18:20:35.130" endtime="20200727 18:20:37.631"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:20:31.348" endtime="20200727 18:20:37.632"></status>
+</kw>
+<kw name="E submeto minha senha &quot;amanda12&quot;" library="kws">
+<kw name="Input Value" library="AppiumLibrary">
+<doc>Sets the given value into text field identified by `locator`. This is an IOS only keyword, input value makes use of set_value</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${senha}</arg>
+</arguments>
+<msg timestamp="20200727 18:20:37.634" level="INFO">Setting text 'amanda12' into text field 'id=com.walmart.android:id/password'</msg>
+<status status="PASS" starttime="20200727 18:20:37.632" endtime="20200727 18:20:38.717"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_SINGNIN}</arg>
+</arguments>
+<msg timestamp="20200727 18:20:38.722" level="INFO">Clicking element 'id=com.walmart.android:id/signin_button'.</msg>
+<status status="PASS" starttime="20200727 18:20:38.718" endtime="20200727 18:20:39.804"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:20:37.632" endtime="20200727 18:20:39.804"></status>
+</kw>
+<kw name="Então devo receber a mensagem &quot;Hi Amanda!&quot;" library="kws">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${msg}</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:20:39.805" endtime="20200727 18:20:44.915"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:20:39.805" endtime="20200727 18:20:44.915"></status>
+</kw>
+<kw name="Close Session" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20200727 18:20:47.797" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200727 18:20:44.916" endtime="20200727 18:20:47.797"></status>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20200727 18:20:47.798" endtime="20200727 18:20:51.898"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:20:44.916" endtime="20200727 18:20:51.899"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:19:32.486" endtime="20200727 18:20:51.899" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Login email inválido">
+<kw name="Open Session" library="base" type="setup">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/walmart.apk</arg>
+<arg>udid=emulator-5554</arg>
+<arg>adbExecTimeout=120000</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:20:51.902" endtime="20200727 18:21:35.425"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:20:51.902" endtime="20200727 18:21:35.425"></status>
+</kw>
+<kw name="Dado que acesso a página principal" library="kws">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEXTO_WELCOME}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:21:35.426" endtime="20200727 18:21:40.035"></status>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<doc>Click text identified by ``text``.</doc>
+<arguments>
+<arg>${TEXTO_NEXT}</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:21:40.036" endtime="20200727 18:21:40.466"></status>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<doc>Click text identified by ``text``.</doc>
+<arguments>
+<arg>${TEXTO_NEXT}</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:21:40.467" endtime="20200727 18:21:41.281"></status>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<doc>Click text identified by ``text``.</doc>
+<arguments>
+<arg>${TEXTO_STARTED}</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:21:41.282" endtime="20200727 18:21:42.154"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200727 18:21:45.157" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200727 18:21:42.154" endtime="20200727 18:21:45.157"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_ENABLE}</arg>
+</arguments>
+<msg timestamp="20200727 18:21:45.158" level="INFO">Clicking element 'id=com.walmart.android:id/enableLocation'.</msg>
+<status status="PASS" starttime="20200727 18:21:45.157" endtime="20200727 18:21:45.195"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEXTO_DENY}</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:21:45.196" endtime="20200727 18:21:46.623"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_DENY}</arg>
+</arguments>
+<msg timestamp="20200727 18:21:46.625" level="INFO">Clicking element 'id=com.android.packageinstaller:id/permission_deny_button'.</msg>
+<status status="PASS" starttime="20200727 18:21:46.623" endtime="20200727 18:21:47.104"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:21:35.425" endtime="20200727 18:21:47.105"></status>
+</kw>
+<kw name="Quando submeto o meu email &quot;amanda#hotmail.com&quot;" library="kws">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEXTO_SINGNIN}</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:21:47.106" endtime="20200727 18:21:48.129"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_SINGN}</arg>
+</arguments>
+<msg timestamp="20200727 18:21:48.133" level="INFO">Clicking element 'accessibility_id=Sign in'.</msg>
+<status status="PASS" starttime="20200727 18:21:48.129" endtime="20200727 18:21:48.193"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200727 18:21:50.194" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200727 18:21:48.193" endtime="20200727 18:21:50.194"></status>
+</kw>
+<kw name="Input Value" library="AppiumLibrary">
+<doc>Sets the given value into text field identified by `locator`. This is an IOS only keyword, input value makes use of set_value</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200727 18:21:50.197" level="INFO">Setting text 'amanda#hotmail.com' into text field 'id=com.walmart.android:id/email'</msg>
+<status status="PASS" starttime="20200727 18:21:50.194" endtime="20200727 18:21:50.579"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:21:47.105" endtime="20200727 18:21:50.580"></status>
+</kw>
+<kw name="E submeto minha senha &quot;amanda12&quot;" library="kws">
+<kw name="Input Value" library="AppiumLibrary">
+<doc>Sets the given value into text field identified by `locator`. This is an IOS only keyword, input value makes use of set_value</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${senha}</arg>
+</arguments>
+<msg timestamp="20200727 18:21:50.584" level="INFO">Setting text 'amanda12' into text field 'id=com.walmart.android:id/password'</msg>
+<status status="PASS" starttime="20200727 18:21:50.582" endtime="20200727 18:21:51.131"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_SINGNIN}</arg>
+</arguments>
+<msg timestamp="20200727 18:21:51.135" level="INFO">Clicking element 'id=com.walmart.android:id/signin_button'.</msg>
+<status status="PASS" starttime="20200727 18:21:51.131" endtime="20200727 18:21:52.059"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:21:50.581" endtime="20200727 18:21:52.059"></status>
+</kw>
+<kw name="Então devo receber a mensagem &quot;Please enter a valid email address&quot;" library="kws">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${msg}</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:21:52.060" endtime="20200727 18:21:52.322"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:21:52.060" endtime="20200727 18:21:52.323"></status>
+</kw>
+<kw name="Close Session" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20200727 18:21:53.349" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200727 18:21:52.324" endtime="20200727 18:21:53.349"></status>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20200727 18:21:53.350" endtime="20200727 18:21:56.148"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:21:52.323" endtime="20200727 18:21:56.149"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:20:51.901" endtime="20200727 18:21:56.149" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Login email não preenchido">
+<kw name="Open Session" library="base" type="setup">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/walmart.apk</arg>
+<arg>udid=emulator-5554</arg>
+<arg>adbExecTimeout=120000</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:21:56.152" endtime="20200727 18:22:50.035"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:21:56.152" endtime="20200727 18:22:50.035"></status>
+</kw>
+<kw name="Dado que acesso a página principal" library="kws">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEXTO_WELCOME}</arg>
+<arg>30</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:22:50.036" endtime="20200727 18:22:54.977"></status>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<doc>Click text identified by ``text``.</doc>
+<arguments>
+<arg>${TEXTO_NEXT}</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:22:54.977" endtime="20200727 18:22:55.674"></status>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<doc>Click text identified by ``text``.</doc>
+<arguments>
+<arg>${TEXTO_NEXT}</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:22:55.674" endtime="20200727 18:22:56.478"></status>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<doc>Click text identified by ``text``.</doc>
+<arguments>
+<arg>${TEXTO_STARTED}</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:22:56.479" endtime="20200727 18:22:57.289"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200727 18:23:00.291" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200727 18:22:57.289" endtime="20200727 18:23:00.291"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_ENABLE}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:00.293" level="INFO">Clicking element 'id=com.walmart.android:id/enableLocation'.</msg>
+<status status="PASS" starttime="20200727 18:23:00.291" endtime="20200727 18:23:00.343"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEXTO_DENY}</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:23:00.343" endtime="20200727 18:23:01.364"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_DENY}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:01.366" level="INFO">Clicking element 'id=com.android.packageinstaller:id/permission_deny_button'.</msg>
+<status status="PASS" starttime="20200727 18:23:01.364" endtime="20200727 18:23:02.318"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:22:50.035" endtime="20200727 18:23:02.318"></status>
+</kw>
+<kw name="Quando submeto o meu email &quot;${EMPTY}&quot;" library="kws">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEXTO_SINGNIN}</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:23:02.320" endtime="20200727 18:23:02.958"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_SINGN}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:02.962" level="INFO">Clicking element 'accessibility_id=Sign in'.</msg>
+<status status="PASS" starttime="20200727 18:23:02.958" endtime="20200727 18:23:03.249"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200727 18:23:05.252" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200727 18:23:03.249" endtime="20200727 18:23:05.252"></status>
+</kw>
+<kw name="Input Value" library="AppiumLibrary">
+<doc>Sets the given value into text field identified by `locator`. This is an IOS only keyword, input value makes use of set_value</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:05.255" level="INFO">Setting text '' into text field 'id=com.walmart.android:id/email'</msg>
+<status status="PASS" starttime="20200727 18:23:05.252" endtime="20200727 18:23:06.312"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:02.319" endtime="20200727 18:23:06.312"></status>
+</kw>
+<kw name="E submeto minha senha &quot;amanda12&quot;" library="kws">
+<kw name="Input Value" library="AppiumLibrary">
+<doc>Sets the given value into text field identified by `locator`. This is an IOS only keyword, input value makes use of set_value</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${senha}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:06.315" level="INFO">Setting text 'amanda12' into text field 'id=com.walmart.android:id/password'</msg>
+<status status="PASS" starttime="20200727 18:23:06.313" endtime="20200727 18:23:07.351"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_SINGNIN}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:07.354" level="INFO">Clicking element 'id=com.walmart.android:id/signin_button'.</msg>
+<status status="PASS" starttime="20200727 18:23:07.352" endtime="20200727 18:23:08.249"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:06.313" endtime="20200727 18:23:08.249"></status>
+</kw>
+<kw name="Então devo receber a mensagem &quot;Please enter an email address&quot;" library="kws">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${msg}</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" starttime="20200727 18:23:08.250" endtime="20200727 18:23:08.482"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:08.250" endtime="20200727 18:23:08.484"></status>
+</kw>
+<kw name="Close Session" library="base" type="teardown">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20200727 18:23:09.679" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200727 18:23:08.485" endtime="20200727 18:23:09.680"></status>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20200727 18:23:09.681" endtime="20200727 18:23:12.738"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:08.485" endtime="20200727 18:23:12.739"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:21:56.150" endtime="20200727 18:23:12.739" critical="yes"></status>
+</test>
+<doc>Testes do login no Walmart Mobile</doc>
+<status status="PASS" starttime="20200727 18:19:32.257" endtime="20200727 18:23:12.785"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
