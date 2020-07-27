@@ -13,4 +13,3 @@ ${BOTAO_ENABLE}     id=com.walmart.android:id/enableLocation
 ${CAMPO_EMAIL}      id=com.walmart.android:id/email
 ${CAMPO_SENHA}      id=com.walmart.android:id/password 
 ${BOTAO_SINGNIN}    id=com.walmart.android:id/signin_button
-${TEXTO_HI}    Sign in 
